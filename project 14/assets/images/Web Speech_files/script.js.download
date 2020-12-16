@@ -1,0 +1,93 @@
+// window.speechSynthesis.speak(new SpeechSynthesisUtterance("Kesa dia, nahi dia asha?"));
+
+const imagesContainer = document.getElementById('images-container');
+const select = document.getElementById('voices');
+const toggleCustomButton = document.getElementById('custom-text');
+const closeButton = document.getElementById('close');
+const form = document.getElementById('form');
+const submit = document.getElementById('submit');
+const txt = document.getElementById('text');
+
+const imagesData = [{"title":"Aurora Borealis","name":"aurora","description":"There are beautiful nothern lights of aurora"},{"title":"Flying Bird","name":"bird","description":"There is a flying bird"},{"title":"City View","name":"city","description":"This is a top view of a city"},{"title":"Flowers","name":"flowers","description":"There are many flowers"},{"title":"Thick Forest","name":"forest","description":"It is a thick forest"},{"title":"Running Horse","name":"horse","description":"There is a running horse"},{"title":"Robin's Nest","name":"house","description":"There is a wooden house build on a lake"},{"title":"Mountains","name":"mountains","description":"There are mountains and a lake"},{"title":"Snowy Mountains","name":"snow","description":"There is heavy snow on mountains"},{"title":"Sunset View","name":"sunset","description":"There is a sunet view from sea side"},{"title":"Surfing","name":"surfing","description":"A man is surfing on a wave"},{"title":"Vulture","name":"vulture","description":"There is a vulture"}]
+const spSynth = window.speechSynthesis;
+let voices = [];
+
+select.selectedIndex = localStorage.getItem('selectedVoiceIndex') ? parseInt(localStorage.getItem('selectedVoiceIndex')): 0;
+
+
+function displayImages(){
+    imagesContainer.innerHTML = '';
+    imagesData.forEach(image => {
+        const box = document.createElement('div');
+        box.className = "box";
+        box.innerHTML = `
+        <img class="image" data-description="${image.description}" src="assets/images/${image.name}.jpg">
+        <p>${image.title}</p>
+        `
+        imagesContainer.appendChild(box);
+    })
+}
+
+function populateVoiceList() {
+    voices = spSynth.getVoices();
+    for(i = 0; i < voices.length ; i++) {
+      const option = document.createElement('option');
+      option.innerText = voices[i].name + ' (' + voices[i].lang + ')';
+      if(voices[i].default) {
+        option.innerText += ' -- DEFAULT';
+      }
+      option.setAttribute('data-lang', voices[i].lang);
+      option.setAttribute('data-name', voices[i].name);
+      select.appendChild(option);
+    }
+}
+
+function setSelectVoice() {
+    localStorage.setItem('selectedVoiceIndex',select.selectedIndex);
+}
+
+
+toggleCustomButton.addEventListener('click', e => {
+    form.classList.toggle('show');
+})
+closeButton.addEventListener('click', e => {
+    e.preventDefault();
+    form.classList.toggle('show');  
+})
+
+submit.addEventListener('click', event => {
+    event.preventDefault();
+    var utterThis = new SpeechSynthesisUtterance(txt.value);
+    var selectedOption = select.selectedOptions[0].getAttribute('data-name');
+    for(i = 0; i < voices.length ; i++) {
+      if(voices[i].name === selectedOption) {
+        utterThis.voice = voices[i];
+      }
+    }
+    spSynth.speak(utterThis);
+});
+
+select.addEventListener('change', setSelectVoice);
+
+imagesContainer.addEventListener('click', event => {
+    const nodeList = event.path;
+    nodeList.forEach(element => {
+        if(element.className === 'box'){
+            const imageDescription = element.querySelector('img').getAttribute('data-description');
+            var utterThis = new SpeechSynthesisUtterance(imageDescription);
+            var selectedOption = select.selectedOptions[0].getAttribute('data-name');
+            for(i = 0; i < voices.length ; i++) {
+              if(voices[i].name === selectedOption) {
+                utterThis.voice = voices[i];
+              }
+            }
+            spSynth.speak(utterThis);            
+        }
+    })    
+})
+
+displayImages();
+populateVoiceList();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = populateVoiceList;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Seat Selection</title>
+    <link rel="shortcut icon" href="../assets/icons/my-icon.png">
+</head>
+<body>
+    <div class="info">By Ahmed Faraz _</div>
+    <div class="main-container">
+        <div class="movie-container">
+            <label for="">Please Select Your Movie</label>
+            <select name="" id="movie">
+                <option value="15">Top Gun: Maverick ($15)</option>
+                <option value="20">Jurassic World: Fallen Kingdom ($20)</option>
+                <option value="10">Jumanji: The Next Level ($10)</option>
+                <option value="12">The Martian ($12)</option>
+            </select>
+        </div>
+        <ul class="legend">
+            <li>
+                <div class="seat available"></div>
+                <small>Available</small>
+            </li>
+            <li>
+                <div class="seat selected"></div>
+                <small>Selected</small>
+            </li>
+            <li>
+                <div class="seat occupied"></div>
+                <small>Occupied</small>
+            </li>
+        </ul>
+    
+        <div class="container">
+            <div class="screen">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+            <div class="row">
+                <div class="seat available">1</div>
+                <div class="seat available">2</div>
+                <div class="seat available">3</div>
+                <div class="seat available">4</div>
+                <div class="seat available">5</div>
+                <div class="seat available">6</div>
+                <div class="seat available">7</div>
+                <div class="seat available">8</div>
+            </div>
+            <div class="row">
+                <div class="seat available">9</div>
+                <div class="seat available">10</div>
+                <div class="seat available">11</div>
+                <div class="seat available">12</div>
+                <div class="seat available">13</div>
+                <div class="seat available">14</div>
+                <div class="seat available">15</div>
+                <div class="seat available">16</div>
+            </div>
+            <div class="row">
+                <div class="seat available">17</div>
+                <div class="seat available">18</div>
+                <div class="seat available">19</div>
+                <div class="seat available">20</div>
+                <div class="seat available">21</div>
+                <div class="seat available">22</div>
+                <div class="seat available">23</div>
+                <div class="seat available">24</div>
+            </div>
+            <div class="row">
+                <div class="seat available">25</div>
+                <div class="seat available">26</div>
+                <div class="seat available">27</div>
+                <div class="seat available">28</div>
+                <div class="seat available">29</div>
+                <div class="seat available">30</div>
+                <div class="seat available">31</div>
+                <div class="seat available">32</div>
+            </div>
+            <div class="row">
+                <div class="seat available">33</div>
+                <div class="seat available">34</div>
+                <div class="seat available">35</div>
+                <div class="seat available">36</div>
+                <div class="seat available">37</div>
+                <div class="seat available">38</div>
+                <div class="seat available">39</div>
+                <div class="seat available">40</div>
+            </div>
+            <div class="row">
+                <div class="seat available">41</div>
+                <div class="seat available">42</div>
+                <div class="seat available">43</div>
+                <div class="seat available">44</div>
+                <div class="seat available">45</div>
+                <div class="seat available">46</div>
+                <div class="seat available">47</div>
+                <div class="seat available">48</div>
+            </div>
+        </div>
+    
+        <p class="text">
+            You have selected <span id="count">0</span> seats for a total Price of $<span id="total">0</span>.
+        </p>
+    
+        <div class="buttons">
+            <button id="reset">Reset</button>
+            <a href="../index.html#project-02"><button id="home">HOME</button></a>
+            <button id="buy">Buy</button>
+        </div>
+    </div>
+    <!-- Extra Feature for ticket -->
+    <div class="ticket">
+        <!-- <h1 class="cinema">Cinema Ticket</h1><h1>Movie 3D</h1><div class="ticketDetails">THEATER<span id="theaterNo">1</span></div><div class="ticketDetails">SEATS<span id="seats">0</span></div><div class="ticketDetails">SEAT Nos<span id="seatNumbers">0</span></div><div class="ticketDetails">PRICE<span id="totalPrice">0</span></div><hr><div class="ticketDetails">DATE<span id="date">0</span></div><div class="ticketDetails">DAY<span id="day">0</span></div><hr><div style="font-size: 16px; margin-top: 2vh;">Thank You | Enjoy the Movie</div><button class="ok">OK</button> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

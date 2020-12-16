@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: 0;
+}
+
+::selection {
+    background-color: none;
+    color: none;
+}
+
+::-moz-selection {
+    background-color: none;
+    color: none;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 1vmax;
+}
+
+header {
+    background-color: #652DC1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vmax;
+    width: 100%;
+}
+
+header .info {
+    color: #ACACE6;
+    align-self: flex-end;
+    font-size: 12px;
+}
+
+header h1 {
+    margin-bottom: 1vmax;
+}
+
+form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    max-width: 100%;
+}
+
+form input {
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 50px;
+    border: 0;
+}
+
+form button {
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 14px 30px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #652DC1;
+    color: white;
+    font-weight: bold;
+}
+
+form button:active {
+    transform: scale(.95);
+}
+
+main {
+    width: 600px;
+    max-width: 100%;
+    padding: 0 1vmax;
+}
+
+main ul {
+    list-style-type: none;
+}
+
+main ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0 0 0;
+    border-bottom: 1px solid lightgray;
+    padding: 5px;
+}
+
+main ul li span {
+    width: 50%;
+}
+
+main h3 {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+main .lyr-btn {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+main .lyr-btn:active {
+    transform: scale(0.95);
+}
+
+main p {
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.pagination {
+    padding: 5px;
+}
+
+.pgn-btn {
+    cursor: pointer;
+    padding: 10px 30px;
+    border: 0;
+    background-color: #652DC1;
+    color: white;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.pgn-btn:active {
+    transform: scale(0.95);
+}

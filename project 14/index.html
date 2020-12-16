@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../assets/icons/my-icon.png">
+    <title>Web Speech</title>
+</head>
+<body>
+    <!-- Top header -->
+    <p class="info">By Ahmed Faraz _</p>
+    <h1>Web Speech</h1>
+    <button class="btn" id="custom-text">Toggle Custom Text</button>
+    <label class="label" for="images-container">Click on images to listen</label>
+    <!-- All images container -->
+    <div class="images-container" id="images-container">
+        <!-- Sample -->
+        <!-- <div class="box">
+            <img class="image" src="assets/images/aurora.jpg">
+            <p>Aurora Borealis</p>
+        </div> -->
+        </div>
+    </div>
+    <!-- Form  -->
+    <form class="form" id="form">
+        <h2>Text to Speech<button class="close" id="close">x</button></h2>
+        <label for="voices">Change Voice</label>
+        <select id="voices"></select>
+        <textarea id="text" cols="30" rows="10" placeholder="Please provide your custom text for Web Speech API Reader"></textarea>
+        <button class="submit" id="submit">Read Custom Text</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/icons/my-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+    <title>Random Meal Generator</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <p class="info">By Ahmed Faraz _</p>
+            <h1>Random Meal Generator</h1>
+
+            <div class="flex">
+
+                <!-- search form -->
+                <form class="form" id="form">
+                    <input type="text" id="search" placeholder="Enter meal or keyword for search">
+                    <button class="search-button" id="search-button" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+
+                <button class="random-button" id="random-button">
+                    <i class="fas fa-random"></i>
+                </button>
+            </div>
+            <a href="../index.html#project-08"><button class="home">Home</button></a>
+        </header>
+        <!-- Main Body -->
+        <main>
+            <!-- Result Heading -->
+            <div id="result-heading"></div>
+
+            <!-- Container for all meals fetched from API search -->
+            <div class="meals" id="meals"></div>
+
+            <!-- To display additional information for a selected meal -->
+            <div id="selected-meal"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

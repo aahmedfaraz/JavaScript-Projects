@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../assets/icons/my-icon.png">
+    <title>Infinite Scroll</title>
+</head>
+<body>
+    <p class="info">By Ahmed Faraz _</p>
+    <h1>Blog with Infinite Scroll</h1>
+    <!-- Input fields for filtering fetched posts -->
+    <div class="filter-container">
+        <input type="text" class="filter" id="filter" placeholder="Enter Keyword for filter">
+    </div>
+    <!-- This container will hold all posts fetched from API -->
+    <div class="post-container" id="post-container"></div>
+    <!-- This loader will appear when waiting posts from fetch -->
+    <div class="loader" id="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

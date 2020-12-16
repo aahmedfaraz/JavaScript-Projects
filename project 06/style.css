@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --theme-color-1: black;
+    --theme-color-2: rgb(255, 255, 0);
+    --nav-color: rgb(14, 14, 14);
+    --nav-hover: #021938;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection{
+    background-color: none;
+    border: none;
+}
+::-moz-selection{
+    background-color: none;
+    border: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    color: var(--theme-color-1);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 20%;
+    height: 100vh;
+    background-color: var(--nav-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition-duration: 1s;
+}
+
+nav.show {
+    transform: translateX(0%);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li {
+    font-size: 1em;
+    padding: 1vmax;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    list-style-type: none;
+}
+
+nav ul li:first-of-type {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav li:hover {
+    background-color: var(--nav-hover);
+}
+
+.logo {
+    align-self: flex-end;
+    padding: 1vmax;
+    animation: zoom 1s ease-in-out infinite alternate;
+}
+
+.logo > img {
+    width: 15vmin;
+    height: 15vmin;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+header {
+    background-color: var(--theme-color-1);
+    color: white;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vmax;
+}
+
+.info {
+    align-self: flex-end;
+    font-size: 1vmax;
+}
+
+header p {
+    margin: 1vmax;
+    text-align: justify;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:focus {
+    outline: 0;
+}
+
+.toggle {
+    position: fixed;
+    font-size: 1vmax;
+    background-color: white;
+    border: 1px solid var(--theme-color-1);
+    color: var(--theme-color-1);
+    border-radius: 5px;
+    padding: 1vmax;
+    top: 0;
+    left: 0;
+    margin: 1vmax;
+    z-index: 101;
+}
+
+.toggle:active {
+    background-color: whitesmoke;
+}
+
+.apply {
+    background-color: var(--theme-color-2);
+    color: var(--theme-color-1);
+    border: 0;
+    border: 1px solid var(--theme-color-1);
+    border-radius: 5px;
+    padding: 2vmax 4vmax;
+    font-weight: bold;
+    margin-bottom: 1vmax;
+    animation: zoom 1s ease-in-out infinite alternate;
+}
+
+.apply:hover {
+    animation: none;
+}
+
+.apply:active {
+    background-color: white;
+}
+
+.home {
+    background-color: var(--theme-color-2);
+    color: var(--theme-color-1);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+    padding: 2vmax 4vmax;
+    font-weight: bold;
+    margin-bottom: 1vmax;
+    animation: zoom 1s ease-in-out infinite alternate;
+}
+
+.home:hover {
+    animation: none;
+}
+
+.home:active {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container > p {
+    box-shadow: 0 0 5px black;
+    text-align: justify;
+    padding: 3vmax;
+    border-radius: 5px;
+    margin-bottom: 2vmax;
+}
+
+h2 {
+    padding: 2vmax;
+}
+
+.articles {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    flex-wrap: nowrap;
+}
+
+article {
+    background-color: var(--theme-color-2);
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vmax;
+    margin: 1vmax;
+}
+
+.container ul {
+    margin-bottom: 2vmax;
+}
+
+.modal-container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 102;
+    display: none;
+    transition-duration: 1s;
+}
+
+.modal-container.show {
+    display: flex;
+    animation: appearForm 1s;
+}
+
+.modal-main {
+    background-color: white;
+    width: auto;
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+}
+
+.modal-header button {
+    padding: 10px;
+    background-color: white;
+    border: 0;
+    border-radius: 5px;
+}
+
+.modal-header button:active {
+    background-color: whitesmoke;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1vmax;
+}
+
+.modal-content p {
+    font-size: 0.8rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vmax;
+}
+
+.form div {
+    margin-top: 1vmax;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    cursor: pointer;
+}
+
+.form-input {
+    padding: 1vmax;
+    max-width: 100%;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.submit {
+    cursor: pointer;
+    margin-top: 1vmax;
+    padding: 2vmax;
+    border: 0;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.submit:hover {
+    background-color: rgb(19, 19, 19);
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1.05);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes appearForm {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {/*Laptop View*/
+    nav {
+        width: 40%;
+    }
+
+    .toggle {
+        font-size: 2vmax;
+        padding: 1.5vmax;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .info {
+        font-size: 1.5vmax;
+    }
+}
+
+@media screen and (max-width: 450px) {/*Mobile*/
+    nav {
+        width: 100%;
+    }
+
+    .logo > img {
+        width: 20vmin;
+        height: 20vmin;
+    }
+
+    h1 {
+        font-size: 4vmax;
+        padding: 2vmax;
+    }
+
+    header p {
+        border-top: 1px solid white;
+        margin-top: 2vmax;
+        padding: 1vmax;
+    }
+
+    .toggle {
+        padding: 2vmax;
+        margin: 2vmax;
+    }
+
+    .container {
+        padding: 2vmax;
+    }
+
+    .articles {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    article {
+        margin: 0 0 2vmax 0;
+    }
+    
+    .info {
+        font-size: 2.1vmax;
+    }
+
+    .modal-main {
+        width: 90%;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="../assets/icons/my-icon.png">
+    <title>Fast Typing Game</title>
+</head>
+<body>
+    <div class="info"><p>By Ahmed Faraz _</p></div>
+    <!--Pop up message-->
+    <div class="message" id="message">
+        <small><b>Game Over</b> ! You ran out of time</small>
+        <p>At Level <span id="message-difficulty">Easy</span></p>
+        <p>Your Score is: <span id="message-score">0</span></p>
+        <div class="message-buttons-container">
+            <button class="message-buttons restart"><i class="fas fa-redo-alt"></i> Restart</button>
+            <button class="message-buttons home"><i class="fas fa-home"></i> Home</button>
+        </div>
+    </div>
+    <!--Menu Page-->
+    <div class="menu show" id="menu">
+        <h1>Fast Typing Game</h1>
+        <button class="start" id="start">Start</button>
+        <form class="form">
+            <fieldset>
+                <legend>Settings</legend>
+                <div class="form-control">
+                    <label for="difficulty">Difficulty</label>
+                    <div id="difficulty">
+                        <input type="radio" id="easy" name="difficulty" value="Easy" checked>
+                        <label for="easy">Easy</label>
+                        <input type="radio" id="medium" name="difficulty" value="Medium">
+                        <label for="medium">Medium</label>
+                        <input type="radio" id="hard" name="difficulty" value="Hard">
+                        <label for="hard">Hard</label>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label for="type">Type</label>
+                    <div id="type">
+                        <input type="radio" id="words" name="type" value="Words" checked>
+                        <label for="words">Words</label>
+                        <input type="radio" id="sentences" name="type" value="Sentences">
+                        <label for="sentences">Sentences</label>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <label for="info">Info</label>
+        <div class="menu-info">
+            <p>Since you choose, Difficulty: <span id="info-difficulty">Easy</span> & Type: <span id="info-type">Words</span>.</p>
+            <p>So you will have, Time <span id="info-time">10s</span> & Bonus <span id="info-bonus">+5s</span> on every success.</p>
+        </div>
+    </div>
+    <!--Main Page-->
+    <main class="main" id="main">
+        <div class="main-buttons-container">
+            <button class="main-buttons restart"><i class="fas fa-redo-alt"></i> Restart</button>
+            <button class="main-buttons home"><i class="fas fa-home"></i> Home</button>
+        </div>
+        <h1>Fast Typing Game</h1>
+        <p>Level: <span id="main-diffuculty">Easy</span></p>
+        <div class="navigation">
+            <p>Score: <span class="number" id="score">0</span></p>
+            <p>Time: <span class="number" id="time">0</span>s</p>
+        </div>
+        <div class="main-container">
+            <small id="main-small">Type the word given below</small>
+            <p class="element" id="element">ahmed</p><!--We will assign class as per requirement-->
+            <input type="text" autocomplete="false" class="input" id="input" placeholder="Type Here">
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

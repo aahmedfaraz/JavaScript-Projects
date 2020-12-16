@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../assets/icons/my-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <title>Landing Page</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://picsum.photos/100" alt="Logo Here">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="info">By Ahmed Faraz _</div>
+        <button class="toggle" id="toggle">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
+        <h1>Landing Page</h1>
+        <p>It is fine to celebrate success, but it is more important to heed the lessons of failure</p>
+        <button class="apply" id="apply">Apply Now</button>
+    </header>
+    <div class="container">
+        <h2>Cloud Native Computing</h2>
+        <p>Cloud native computing is an approach in software development that utilizes cloud computing to "build and run scalable applications in modern, dynamic environments such as public, private, and hybrid clouds".</p>
+        <p>Frequently, cloud-native applications are built as a set of microservices that run in Docker containers, and may be orchestrated in Kubernetes and managed and deployed using DevOps and Git CI workflows</p>
+        <h2>More Information</h2>
+        <div class="articles">
+            <article>
+                <h3>Cloud</h3>
+                <span class="iconify" data-icon="ant-design:cloud-filled" data-inline="false" data-width="50" data-height="50"></span>
+                <p>Cloud computing is the delivery of different services through the Internet. These resources include tools and applications like data storage, servers, databases, networking, and software.</p>
+            </article>
+            <article>
+                <h3>Docker</h3>
+                <span class="iconify" data-icon="file-icons:docker" data-inline="false" data-width="50" data-height="50"></span>
+                <p>Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs.</p>
+            </article>
+            <article>
+                <h3>Kubernetes</h3>
+                <span class="iconify" data-icon="cib:kubernetes" data-inline="false" data-width="50" data-height="50"></span>
+                <p>Kubernetes (commonly stylized as K8s) is an open-source container-orchestration system for automating computer application deployment, scaling, and management.</p>
+            </article>
+        </div>
+        <h2>Syllabus</h2>
+        <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+        </ul>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos voluptatum quibusdam quidem, eaque magnam officia accusantium perspiciatis? Sequi facere neque laboriosam? Soluta expedita minus doloribus. Error consequuntur non facilis praesentium.</p>
+        <a href="../index.html#project-06"><button class="home">Home</button></a>
+    </div>
+    <div class="modal-container" id="modal">
+        <div class="modal-main">
+            <div class="modal-header">
+                <h3>Apply</h3>
+                <button class="close" id="close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <p>To sign up for more, please submit this form</p>
+                <form action="" class="form" id="form">
+                    <div>
+                        <label for="name">Username</label>
+                        <input type="text" class="form-input" id="name" placeholder="Username">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" class="form-input" id="email" placeholder="Email">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" class="form-input" id="password" placeholder="Password">
+                    </div>
+                    <div>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" class="form-input" id="confirmPassword" placeholder="Confirm Password">
+                    </div>
+                    <input type="submit" value="Submit" class="submit" id="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

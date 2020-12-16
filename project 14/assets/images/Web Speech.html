@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://127.0.0.1:5500/project%2014/index.html? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Web Speech_files/style.css">
+    <link rel="shortcut icon" href="http://127.0.0.1:5500/assets/icons/my-icon.png">
+    <title>Web Speech</title>
+</head>
+<body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed="">
+    <p class="info">By Ahmed Faraz _</p>
+    <h1>Web Speech</h1>
+    <button class="btn" id="custom-text">Toggle Custom Text</button>
+    <label id="label" for="images-container">Click on images to listen</label>
+    <div class="images-container" id="images-container"><div class="box">
+        <img class="image" data-description="There are beautiful nothern lights of aurora" src="./Web Speech_files/aurora.jpg">
+        <p>Aurora Borealis</p>
+        </div><div class="box">
+        <img class="image" data-description="There is a flying bird" src="./Web Speech_files/bird.jpg">
+        <p>Flying Bird</p>
+        </div><div class="box">
+        <img class="image" data-description="This is a top view of a city" src="./Web Speech_files/city.jpg">
+        <p>City View</p>
+        </div><div class="box">
+        <img class="image" data-description="There are many flowers" src="./Web Speech_files/flowers.jpg">
+        <p>Flowers</p>
+        </div><div class="box">
+        <img class="image" data-description="It is a thick forest" src="./Web Speech_files/forest.jpg">
+        <p>Thick Forest</p>
+        </div><div class="box">
+        <img class="image" data-description="There is a running horse" src="./Web Speech_files/horse.jpg">
+        <p>Running Horse</p>
+        </div><div class="box">
+        <img class="image" data-description="There is a wooden house build on a lake" src="./Web Speech_files/house.jpg">
+        <p>Robin's Nest</p>
+        </div><div class="box">
+        <img class="image" data-description="There are mountains and a lake" src="./Web Speech_files/mountains.jpg">
+        <p>Mountains</p>
+        </div><div class="box">
+        <img class="image" data-description="There is heavy snow on mountains" src="./Web Speech_files/snow.jpg">
+        <p>Snowy Mountains</p>
+        </div><div class="box">
+        <img class="image" data-description="There is a sunet view from sea side" src="./Web Speech_files/sunset.jpg">
+        <p>Sunset View</p>
+        </div><div class="box">
+        <img class="image" data-description="A man is surfing on a wave" src="./Web Speech_files/surfing.jpg">
+        <p>Surfing</p>
+        </div><div class="box">
+        <img class="image" data-description="There is a vulture" src="./Web Speech_files/vulture.jpg">
+        <p>Vulture</p>
+        </div></div>
+    
+    <form class="form" id="form">
+        <h2>Text to Speech<button class="close" id="close">x</button></h2>
+        <label for="voices">Change Voice</label>
+        <select id="voices"><option data-lang="en-US" data-name="Microsoft David Desktop - English (United States)">Microsoft David Desktop - English (United States) (en-US) -- DEFAULT</option><option data-lang="en-US" data-name="Microsoft Zira Desktop - English (United States)">Microsoft Zira Desktop - English (United States) (en-US)</option><option data-lang="de-DE" data-name="Google Deutsch">Google Deutsch (de-DE)</option><option data-lang="en-US" data-name="Google US English">Google US English (en-US)</option><option data-lang="en-GB" data-name="Google UK English Female">Google UK English Female (en-GB)</option><option data-lang="en-GB" data-name="Google UK English Male">Google UK English Male (en-GB)</option><option data-lang="es-ES" data-name="Google español">Google español (es-ES)</option><option data-lang="es-US" data-name="Google español de Estados Unidos">Google español de Estados Unidos (es-US)</option><option data-lang="fr-FR" data-name="Google français">Google français (fr-FR)</option><option data-lang="hi-IN" data-name="Google हिन्दी">Google हिन्दी (hi-IN)</option><option data-lang="id-ID" data-name="Google Bahasa Indonesia">Google Bahasa Indonesia (id-ID)</option><option data-lang="it-IT" data-name="Google italiano">Google italiano (it-IT)</option><option data-lang="ja-JP" data-name="Google 日本語">Google 日本語 (ja-JP)</option><option data-lang="ko-KR" data-name="Google 한국의">Google 한국의 (ko-KR)</option><option data-lang="nl-NL" data-name="Google Nederlands">Google Nederlands (nl-NL)</option><option data-lang="pl-PL" data-name="Google polski">Google polski (pl-PL)</option><option data-lang="pt-BR" data-name="Google português do Brasil">Google português do Brasil (pt-BR)</option><option data-lang="ru-RU" data-name="Google русский">Google русский (ru-RU)</option><option data-lang="zh-CN" data-name="Google 普通话（中国大陆）">Google&nbsp;普通话（中国大陆） (zh-CN)</option><option data-lang="zh-HK" data-name="Google 粤語（香港）">Google&nbsp;粤語（香港） (zh-HK)</option><option data-lang="zh-TW" data-name="Google 國語（臺灣）">Google 國語（臺灣） (zh-TW)</option></select>
+        <textarea id="text" cols="30" rows="10" placeholder="Please provide your custom text for Web Speech API Reader"></textarea>
+        <button class="submit" id="submit">Read Custom Text</button>
+    </form>
+    <script src="./Web Speech_files/script.js.download"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>

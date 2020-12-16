@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+:root {
+    --hover-value: 32;
+    --active-value: 65;
+    --theme-color-1: black;
+    --theme-color-1-hover: rgb(var(--hover-value), var(--hover-value), var(--hover-value));
+    --theme-color-1-active: rgb(var(--active-value), var(--active-value), var(--active-value));
+    --theme-color-2: white;
+    --dark-theme-color-1: white;
+    --dark-theme-color-1-hover: rgb(calc(255 - var(--hover-value)), calc(255 - var(--hover-value)), calc(255 - var(--hover-value)));
+    --dark-theme-color-1-active: rgb(calc(255 - var(--active-value)), calc(255 - var(--active-value)), calc(255 - var(--active-value)));
+    --dark-theme-color-2: black;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+}
+
+::selection {
+    background-color: none;
+    color: none;
+}
+
+::-moz-selection {
+    background-color: none;
+    color: none;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: var(--theme-color-2);
+    color: var(--theme-color-1);
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vmax;
+    overflow-x: hidden;
+}
+
+#top {
+    width: calc(100% - 2vmax);
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+}
+
+#top h4 {
+    font-size: 1vmax;
+}
+
+#top button {
+    font-size: 1vmax;
+    margin: 0;
+    box-shadow: 0 0 10px var(--theme-color-1);
+}
+
+h1 {
+    padding: 1vmax;
+    margin-top: 1vmax;
+    text-align: center;
+    animation: heading 1.5s ease-in infinite alternate;
+}
+
+.container {
+    display: flex;
+    border-bottom: 1px solid var(--theme-color-1);
+    border-top: 1px solid var(--theme-color-1);
+    padding: 1vmax;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2vmax;
+    border-right: 1px solid var(--theme-color-1);
+}
+
+main {
+    padding-left: 2vmax;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    border-bottom: 1px solid var(--theme-color-1);
+    padding: 1vmax;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.total {
+    font-family: 'Libre Baskerville', serif;
+    border: 0;
+    padding: 2vmax;
+}
+
+.userBar {
+    color: var(--theme-color-1);
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1vmax;
+    margin-top: 1vmax;
+    border-radius: 2px;
+    font-size: 1vmax;
+    box-shadow: 0 0 10px var(--theme-color-1);
+}
+
+.userBar > strong {
+    display: flex;
+    align-items: center;
+}
+
+.thumbnail {
+    border-radius: 100%;
+    border: 2px solid var(--theme-color-1);
+    margin-right: 2vmax;
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--theme-color-1);
+    color: var(--theme-color-2);
+    font-weight: bold;
+    font-size: 1.05em;
+    border-radius: 5px;
+    padding: 1vmax;
+    margin: 1vmax;
+    border: 0;
+}
+
+#reset-money {
+    cursor: not-allowed;
+}
+
+section button {
+    font-size: 1vmax;
+    padding: 2vmax 0;
+    width: 15vmax;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: var(--theme-color-1-hover);
+}
+
+button:active {
+    background-color: var(--theme-color-1-active);
+}
+
+button:focus {
+    border: 0;
+    outline: 0;
+}
+
+@keyframes heading {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@media screen and (max-width: 900px){ /*Tablet view*/
+    h2 {
+        font-size: 3vmax;
+    }
+    .userBar {
+        font-size: 2vmax;
+    }
+    section button {
+        font-size: 2vmax;  
+    }
+}
+
+@media screen and (max-width: 500px){ /*Mobile View*/
+    #top h4 {
+        font-size: 2vmax;
+    }
+    
+    #top button {
+        font-size: 2vmax;
+        padding: 1vmax;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 5vmax;
+        padding: 0;
+        padding-bottom: 1vmax;
+    }
+    .container {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    aside {
+        width: 100vw;
+        padding-top: 2vmax;
+        border-right: 0;
+        padding: 1vmax;
+        border-top: 1px solid var(--theme-color-1);
+    }
+
+    main {
+        width: 100vw;
+        padding: 1vmax;
+    }
+
+    h2 {
+        font-size: 3vmax;
+    }
+
+    .userBar {
+        font-size: 2vmax;
+        padding: 2vmax;
+        margin: 2vmax;
+    }
+    .userBar:last-child {
+        margin-bottom: 1vmax;
+    }
+
+    .userBar img {
+        width: 8vmax;
+    }
+
+    button {
+        padding: 3vmax;
+    }
+
+    button:hover {
+        transform: scale(1.01);
+    }
+
+    section {
+        padding-top: 1vmax;
+    }
+
+    section button{
+        font-size: 3vmax;
+        padding: 4vmax 0;
+        width: 40vmin;
+    }
+}

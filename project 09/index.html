@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/icons/my-icon.png">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <!-- Currecy Select -->
+    <div class="top">
+        <h5 class="info">By Ahmed Faraz _</h5>
+        <a href="../index.html#project-09"><button class="home">Home</button></a>
+    </div>
+    <h1>Expense Tracker</h1>
+    <div class="currency-box box">
+        <label for="currency">Select your currency</label>
+        <select id="select-currency">
+            <option value='AED'>AED-UAE Dirham</option>
+            <option value='ARS'>ARS-Argentine Peso</option>
+            <option value='AUD'>AUD-Australian Dollar</option>
+            <option value='BGN'>BGN-Bulgarian Lev</option>
+            <option value='BRL'>BRL-Brazilian Real</option>
+            <option value='BSD'>BSD-Bahamian Dollar</option>
+            <option value='CAD'>CAD-Canadian Dollar</option>
+            <option value='CHF'>CHF-Swiss Franc</option>
+            <option value='CLP'>CLP-Chilean Peso</option>
+            <option value='CNY'>CNY-Chinese Renminbi</option>
+            <option value='COP'>COP-Colombian Peso</option>
+            <option value='CZK'>CZK-Czech Koruna</option>
+            <option value='DKK'>DKK-Danish Krone</option>
+            <option value='DOP'>DOP-Dominican Peso</option>
+            <option value='EGP'>EGP-Egyptian Pound</option>
+            <option value='EUR'>EUR-Euro</option>
+            <option value='FJD'>FJD-Fiji Dollar</option>
+            <option value='GBP'>GBP-Pound Sterling</option>
+            <option value='GTQ'>GTQ-Guatemalan Quetzal</option>
+            <option value='HKD'>HKD-Hong Kong Dollar</option>
+            <option value='HRK'>HRK-Croatian Kuna</option>
+            <option value='HUF'>HUF-Hungarian Forint</option>
+            <option value='IDR'>IDR-Indonesian Rupiah</option>
+            <option value='ILS'>ILS-Israeli New Shekel</option>
+            <option value='INR'>INR-Indian Rupee</option>
+            <option value='ISK'>ISK-Icelandic Krona</option>
+            <option value='JPY'>JPY-Japanese Yen</option>
+            <option value='KRW'>KRW-South Korean Won</option>
+            <option value='KZT'>KZT-Kazakhstani Tenge</option>
+            <option value='MVR'>MVR-Maldivian Rufiyaa</option>
+            <option value='MXN'>MXN-Mexican Peso</option>
+            <option value='MYR'>MYR-Malaysian Ringgit</option>
+            <option value='NOK'>NOK-Norwegian Krone</option>
+            <option value='NZD'>NZD-New Zealand Dollar</option>
+            <option value='PAB'>PAB-Panamanian Balboa</option>
+            <option value='PEN'>PEN-Peruvian Sol</option>
+            <option value='PHP'>PHP-Philippine Peso</option>
+            <option value='PKR' selected>PKR-Pakistani Rupee</option>
+            <option value='PLN'>PLN-Polish Zloty</option>
+            <option value='PYG'>PYG-Paraguayan Guarani</option>
+            <option value='RON'>RON-Romanian Leu</option>
+            <option value='RUB'>RUB-Russian Ruble</option>
+            <option value='SAR'>SAR-Saudi Riyal</option>
+            <option value='SEK'>SEK-Swedish Krona</option>
+            <option value='SGD'>SGD-Singapore Dollar</option>
+            <option value='THB'>THB-Thai Baht</option>
+            <option value='TRY'>TRY-Turkish Lira</option>
+            <option value='TWD'>TWD-New Taiwan Dollar</option>
+            <option value='UAH'>UAH-Ukrainian Hryvnia</option>
+            <option value='USD'>USD-United States Dollar</option>
+            <option value='UYU'>UYU-Uruguayan Peso</option>
+            <option value='ZAR'>ZAR-South African Rand</option>
+        </select>
+    </div>
+    <!-- Reault Area -->
+    <div class="balance box">
+        <h2>Current Balance</h2>
+        <div class="percentage-box">
+            <svg>
+                <circle class="balance outer" cx="50%" cy="50%" r="100"></circle>
+                <circle class="balance inner" cx="50%" cy="50%" r="100"></circle>
+            </svg>
+            <p><span id="balance-percentage">0</span><span>%</span></p>
+        </div>
+        <p><span id="currency-balance" class="currency">PKR</span> <span id="total-balance-amount">00.00</span></p>
+    </div>
+    <div class="income box">
+        <h2>Total Income</h2>
+        <p><span id="currency-income" class="currency">PKR</span> <span id="total-income-amount">00.00</span></p>
+    </div>
+    <div class="expenses box">
+        <h2>Total Expenses</h2>
+        <div class="percentage-box">
+            <svg>
+                <circle class="expenses outer" cx="50%" cy="50%" r="100"></circle>
+                <circle class="expenses inner" cx="50%" cy="50%" r="100"></circle>
+            </svg>
+            <p><span id="expenses-percentage">0</span><span>%</span></p>
+        </div>
+        <p><span id="currency-expenses" class="currency">PKR</span> <span id="total-expenses-amount">00.00</span></p>
+    </div>
+    <!-- Transaction Area -->
+    <h2>Transaction history</h2>
+    <div class="trasaction-container">
+        <p>No transactions have taken place yet</p>
+        <!-- <div class="transaction"><div class="bar income"><div><p class="transaction-description">This is description</p></div><div><p class="currency">PKR</p><p class="transaction-amount">00.00</p></div></div><button class="cancel">x</button></div> -->
+        <!-- <div class="transaction">
+            <div class="bar income">
+                <div class="transaction-description">This is description</div>
+                <div><p class="currency">PKR</p><p class="transaction-amount">00.00</p></div>
+            </div>
+            <button class="cancel">x</button>
+        </div> -->
+    </div>
+    <div class="bar add">
+        +
+    </div>
+    <div class="form-container">
+        <form>
+            <h2>Add Trasaction</h2>
+            <div class="form-control">
+                <label for="description">Description</label>
+                <input type="text" id="description">
+            </div>
+            <div class="form-control">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount">
+            </div>
+            <div class="form-control">
+                <label for="type">Type</label>
+                <div>
+                    <input type="radio" name="type" id="income-radio" value="income" checked>
+                    <label for="income-radio">Income</label>
+                    <input type="radio" name="type" id="expenses-radio" value="expenses">
+                    <label for="expenses-radio">Expenses</label>
+                </div>
+            </div>
+            <button id="submit" type="submit">Add Transaction</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
