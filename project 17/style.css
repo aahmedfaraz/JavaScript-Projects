@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: 0;
+}
+
+::selection {
+    background-color: none;
+}
+
+::-moz-selection {
+    background-color: none;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+small {
+    background-color: rgb(59, 59, 59);
+    color: white;
+    width: 100%;
+    justify-self: flex-start;
+    padding: 5px 10px 0px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+}
+
+p {
+    margin-bottom: 10px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.list-container {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    max-width: 90%;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.number {
+    cursor: not-allowed;
+    text-align: center;
+    line-height: 50px;
+    background-color: black;
+    flex: 1;
+    height: 50px;
+    max-width: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.draggable {
+    cursor: pointer;
+    background-color: rgb(59, 59, 59);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid rgb(59, 59, 59);
+}
+
+.draggable.success {
+    border-color: lime;
+}
+
+.draggable.error {
+    border-color: orangered;
+}
+
+.draggable p {
+    padding-left: 20px;
+}
+
+.draggable i {
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 20px 30px;
+    width: 200px;
+    max-width: 90%;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+
+.btn:last-of-type {
+    margin-bottom: 20px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
