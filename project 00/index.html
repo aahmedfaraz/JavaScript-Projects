@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ahmedfaraz.business@gmail.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <title>BU Parking System</title>
+</head>
+
+<body>
+    <!-- STARTUP - LOGO VIEW -->
+    <div class="startup-logo-container" id="startup-container">
+        <div class="content">
+            <h1>BU Parking Application</h1>
+            <img src="./assets/images/logo.jpg" width="100px" alt="bahria-logo" class="logo">
+        </div>
+    </div>
+    <!-- MAIN PAGEs -->
+    <div class="main-page" id="main-page">
+        <h1>BU Parking System (FYP)</h1>
+        <div class="buttons">
+            <button class="info" id="info"><i class="fas fa-info-circle"></i></button>
+            <button class="btn page-button" id="registration" data-page="registration-page">Register Driver</button>
+            <button class="btn page-button" id="registered" data-page="registered-page">Dashboard</button>
+            <button class="btn page-button" id="history" data-page="history-page">Driver History</button>
+            <button class="btn page-button" id="entries" data-page="entries-page">Do Entries</button>
+        </div>
+        <div class="message-box" id="message-box">
+            <button class="close" id="close"><i class="fas fa-times"></i></button>
+            <h2>About Us</h2>
+            <h3>This is a FYP Project of a Parking System Submitted by:</h3>
+            <p class="props">NAMES<span>REG No.s</span></p>
+            <p>Student 1<span>00001</span></p>
+            <p>Student 2<span>00002</span></p>
+            <p>Student 3<span>00003</span></p>
+        </div>
+    </div>
+
+    <!-- REGISTRATION PAGE -->
+    <div class="registration-page" id="registration-page">
+        <h1>BU Parking System (FYP)</h1>
+        <button class="back"><i class="fas fa-arrow-left"></i> Back</button>
+        <div class="registration-container">
+            <form class="form" id="form">
+                <h2>Registration Form</h2>
+                <div class="row">
+                    <div class="form-control">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter driver name">
+                    </div>
+                    <div class="form-control">
+                        <label for="car">Car No.</label>
+                        <input type="text" id="car" placeholder="Enter Car number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-control">
+                        <label for="phone">Phone No.</label>
+                        <input type="number" id="phone" placeholder="Enter phone number">
+                    </div>
+                    <div class="form-control">
+                        <label for="cnic">CNIC</label>
+                        <input type="text" id="cnic" placeholder="Enter CNIC">
+                    </div>
+                </div>
+                <button class="btn" id="register-button">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- REGISTERED PAGE -->
+    <div class="registered-page" id="registered-page">
+        <h1>BU Parking System (FYP)</h1>
+        <button class="back"><i class="fas fa-arrow-left"></i> Back</button>
+        <div class="registered-container">
+            <h2>Registered Drivers</h2>
+            <div class="headings">
+                <p>Name</p>
+                <p>Car</p>
+                <p>Phone</p>
+                <p>CNIC</p>
+            </div>
+            <p class="registered-msg" id="registered-msg">No Driver has been registered yet</p>
+            <div class="all-data hide" id="all-data">
+                <!-- <div class="data">
+                    <p>Name</p>
+                    <p>Car</p>
+                    <p>Phone</p>
+                    <p>CNIC</p>
+                    <button class="delete" id="0">X</button>
+                </div>
+                <div class="data">
+                    <p>Name</p>
+                    <p>Car</p>
+                    <p>Phone</p>
+                    <p>CNIC</p>
+                    <button class="delete" id="1">X</button> -->
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- HISTORY PAGE -->
+    <div class="history-page" id="history-page">
+        <h1>BU Parking System (FYP)</h1>
+        <button class="back"><i class="fas fa-arrow-left"></i> Back</button>
+        <div class="history-container">
+            <!-- PAGE 1 -->
+            <div class="all-drivers-list show" id="all-drivers-list">
+                <h2>Select Driver</h2>
+                <!-- Component 1 -->
+                <p class="history-msg show" id="history-msg">No Driver has been registered yet</p>
+                <!-- Component 2 -->
+                <ul class="list-container" id="all-drivers">
+                    <!-- <li>
+                        <span>Name</span>
+                        <span>Car</span>
+                        <span>Phone</span>
+                        <span>CNIC</span>
+                    </li>
+                    <li>
+                        <span>Name</span>
+                        <span>Car</span>
+                        <span>Phone</span>
+                        <span>CNIC</span>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- PAGE 2 -->
+            <div class="driver-history-container" id="driver-history-container">
+                <h2>History of <span id="indv-name">Wajahat</span></h2>
+                <ul class="list-heading-container">
+                    <li>
+                        <span>Day</span>
+                        <span>Arrival</span>
+                        <span>Departure</span>
+                    </li>
+                </ul>
+                <!-- Main Component -->
+                <ul class="list-container" id="all-history">
+                    <!-- <li>
+                        <span>Day</span>
+                        <span>Arrival</span>
+                        <span>Departure</span>
+                    </li>
+                    <li>
+                        <span>Day</span>
+                        <span>Arrival</span>
+                        <span>Departure</span>
+                    </li>
+                    <li>
+                        <span>Day</span>
+                        <span>Arrival</span>
+                        <span>Departure</span>
+                    </li> -->
+                </ul>
+                <p class="record-msg show" id="record-msg">No Record has been updated yet</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENTRIES PAGE -->
+    <div class="entries-page" id="entries-page">
+        <h1>BU Parking System (FYP)</h1>
+        <button class="back"><i class="fas fa-arrow-left"></i> Back</button>
+        <div class="entries-container">
+            <form>
+                <h2>Entries</h2>
+                <div class="form-control">
+                    <label for="card">Driver's Card</label>
+                    <div>
+                        <input type="file" id="card">
+                        <button class="scan" id="scan">Scan Card</button>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label for="day">Day</label>
+                    <input type="text" id="day" placeholder="Enter day">
+                </div>
+                <div class="form-control">
+                    <label for="time-in">Arrival Time</label>
+                    <input type="time" id="time-in" placeholder="Enter time of arrival">
+                </div>
+                <div class="form-control">
+                    <label for="time-out">Departure Time</label>
+                    <input type="time" id="time-out" placeholder="Enter time of departure">
+                </div>
+            </form>
+            <button class="btn" id="enter-record">Enter Record</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
