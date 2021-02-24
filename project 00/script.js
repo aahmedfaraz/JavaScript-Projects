@@ -349,6 +349,7 @@ infoButton.addEventListener('click', showInfoMessageBox);
 closeButton.addEventListener('click', showInfoMessageBox);
 // 3 - Event listener to navigate to pages
 pageButtons.forEach(button => button.addEventListener('click', (e) => {
+    window.scrollTo(0, 0);
     show(document.getElementById(e.target.getAttribute('data-page')));
     updateAll();
 }))
