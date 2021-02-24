@@ -60,7 +60,7 @@ class Driver {
 // All Arrays and Variables
 let allDrivers = [{
     name: "Person-A",
-    car: "Bugati",
+    car: "Bugatti",
     phone: "03001234567",
     cnic: "1234-1234-12",
     records: [{
@@ -75,13 +75,13 @@ let allDrivers = [{
     },]
 }, {
     name: "Person-B",
-    car: "Ferrari",
+    car: "Mercedes",
     phone: "03111234567",
     cnic: "1234-1234-13",
     records: []
 }, {
     name: "Person-C",
-    car: "Lemborgini",
+    car: "Lamborghini",
     phone: "03221234567",
     cnic: "1234-1234-14",
     records: [{
