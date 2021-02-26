@@ -1,5 +1,6 @@
 // All DOM Elements  (DOM = Document Object Module)
 // Overall usables
+const preLoader = document.getElementById('pre-loader');
 const backButton = document.querySelectorAll('.back');
 const pageButtons = document.querySelectorAll('.page-button');
 // All Pages DOMs
@@ -59,7 +60,7 @@ class Driver {
 }
 // All Arrays and Variables
 let allDrivers = [{
-    name: "Person-A",
+    name: "Robert",
     car: "Bugatti",
     phone: "03001234567",
     cnic: "1234-1234-12",
@@ -74,13 +75,13 @@ let allDrivers = [{
         timeOut: "11:00"
     },]
 }, {
-    name: "Person-B",
+    name: "Thomas",
     car: "Mercedes",
     phone: "03111234567",
     cnic: "1234-1234-13",
     records: []
 }, {
-    name: "Person-C",
+    name: "Peter",
     car: "Lamborghini",
     phone: "03221234567",
     cnic: "1234-1234-14",
@@ -98,6 +99,10 @@ let allDrivers = [{
 let recordPage = false;
 
 // ALL FUNCTIONS
+// Function to disappear pre-loader and start site
+function start() {
+    preLoader.style.display = 'none';
+}
 // All HOME Page Functions
 // 1 - Function to deal with display of Student's info message from (i) button
 function showInfoMessageBox() {

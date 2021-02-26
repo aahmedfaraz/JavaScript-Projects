@@ -218,7 +218,8 @@ h1 {
   float: right;
 }
 
-.message-box > p:first-of-type, .message-box > p:first-of-type > span {
+.message-box > p:first-of-type,
+.message-box > p:first-of-type > span {
   background-color: gray;
   color: white;
   font-weight: bold;
@@ -315,7 +316,7 @@ input[type="file"] {
 }
 
 .form-control > input:focus {
-  border-color:black;
+  border-color: black;
 }
 
 .form > .btn {
@@ -324,7 +325,6 @@ input[type="file"] {
   color: white;
   box-shadow: none;
 }
-
 
 .back {
   cursor: pointer;
@@ -347,11 +347,10 @@ input[type="file"] {
 }
 
 @media (max-width: 430px) {
-
   .form {
     max-width: 70%;
   }
-  
+
   .form > .row {
     max-width: 100%;
     display: flex;
@@ -372,7 +371,6 @@ input[type="file"] {
   .row > .form-control:last-of-type {
     margin-left: 0;
   }
-
 }
 
 /* REGISTERED Page CSS */
@@ -457,7 +455,7 @@ input[type="file"] {
   transform: scale(0.9);
 }
 
-@media (max-width: 430px){
+@media (max-width: 430px) {
   .registered-container > .headings {
     flex-direction: column;
   }
@@ -606,7 +604,7 @@ input[type="file"] {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  border-radius: 5px  ;
+  border-radius: 5px;
 }
 
 .entries-container > form {
@@ -668,4 +666,84 @@ input[type="file"] {
   background-color: black;
   color: white;
   box-shadow: none;
+}
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.main {
+  transform: rotateZ(45deg);
+}
+.loader {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50px;
+}
+
+.loader:nth-of-type(1) {
+  animation: rotate 1s ease infinite;
+}
+.loader:nth-of-type(1) > .loader-inner {
+  opacity: 1;
+}
+
+.loader:nth-of-type(2) {
+  animation: rotate 1s 30ms ease infinite;
+}
+.loader:nth-of-type(2) > .loader-inner {
+  opacity: 0.9;
+}
+
+.loader:nth-of-type(3) {
+  animation: rotate 1s 60ms ease infinite;
+}
+.loader:nth-of-type(3) > .loader-inner {
+  opacity: 0.8;
+}
+
+.loader:nth-of-type(4) {
+  animation: rotate 1s 90ms ease infinite;
+}
+.loader:nth-of-type(4) > .loader-inner {
+  opacity: 0.7;
+}
+
+.loader:nth-of-type(5) {
+  animation: rotate 1s 120ms ease infinite;
+}
+.loader:nth-of-type(5) > .loader-inner {
+  opacity: 0.6;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }
