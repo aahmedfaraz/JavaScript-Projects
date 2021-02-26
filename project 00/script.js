@@ -102,6 +102,7 @@ let recordPage = false;
 // Function to disappear pre-loader and start site
 function start() {
     preLoader.style.display = 'none';
+    showAndDisappearStartupLogo();
 }
 // All HOME Page Functions
 // 1 - Function to deal with display of Student's info message from (i) button
@@ -402,5 +403,4 @@ enterRecordButton.addEventListener('click', e => {
 })
 
 // All Startup Call back funtions - Required to run in start
-showAndDisappearStartupLogo();
 updateAll();
