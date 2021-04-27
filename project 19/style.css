@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+:root {
+  --dark-gray: rgb(66, 66, 66);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+header > h1 {
+  text-align: center;
+  color: var(--dark-gray);
+  padding: 15px;
+  border-bottom: 1px solid rgb(185, 185, 185);
+}
+
+header > h1 > span {
+  font-size: 10px;
+  background-color: dodgerblue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+  display: none;
+}
+
+header > h1 > span.show {
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  background-color: var(--dark-gray);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.clock {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+.clock > img {
+  width: 100%;
+  height: 100%;
+}
+
+.clock > .needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotateZ(180deg);
+  transform-origin: top;
+  width: 5px;
+  height: 100px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.clock > #hours-needle {
+  height: 70px;
+}
+
+.clock > #seconds-needle {
+  width: 2px;
+}
+
+.time-left-container > .keys,
+.time-left-container > .values {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-row: 1;
+  grid-gap: 10px;
+  text-align: center;
+}
+
+.time-left-container > .keys > span {
+  font-size: 10px;
+}
+
+.new-year-sticker {
+  position: absolute;
+  display: none;
+}
+.new-year-sticker.show {
+  display: block;
+}
+
+.message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 300px;
+  max-width: 90%;
+  background-color: white;
+  box-shadow: 0 0 20px dodgerblue;
+  padding: 20px;
+  text-align: justify;
+  transition: transform 1s ease;
+  /* display: none; */
+}
+
+.message.show {
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.message > button {
+  cursor: pointer;
+  border: 0;
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.message > button:active {
+  transform: scale(0.95);
+}
+
+.new-year-effect {
+  cursor: pointer;
+  border: 0;
+  background-color: rgb(163, 163, 163);
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid rgb(95, 95, 95);
+}
+
+.new-year-effect:active {
+  transform: scale(0.95);
+}
