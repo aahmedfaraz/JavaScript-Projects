@@ -31,6 +31,8 @@ function startClock() {
     year = date.getFullYear();
     month = date.getMonth();
     day = date.getDate();
+    // Announce New Year if it is
+    if(month === 0 && day === 1) happyNewYear();
     
     // Updating DOM in message
     yearMessage.innerText = year + 1;
@@ -101,7 +103,6 @@ function updateTimeLeft() {
         }
     };
     daysDOM.innerText = format(fullMonth[month] - day);
-
     monthsDOM.innerText = format(12 - (month + 1));
     yearDOM.innerText = year + 1;
 }
@@ -118,6 +119,7 @@ function isleapYear(year) {
 
 // 6 - Function to run on New Year
 function happyNewYear() {
+    newYearBadge.innerText = `Happy New Year ${year}`
     newYearBadge.classList.add('show');
     newYearSticker.classList.add('show');
     message.classList.add('show');
