@@ -70,21 +70,15 @@ nav {
 }
 
 .logo {
-  padding: 10px;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo img {
   width: 120px;
-  animation: logo 1s cubic-bezier(1, 0.02, 0, 0.99) 0s infinite alternate;
-}
-
-@keyframes logo {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0.9);
-  }
 }
 
 .option-list {
