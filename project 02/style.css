@@ -287,12 +287,16 @@ body {
 
 .container > .ticket-card > p > span {
   max-width: 50%;
-  text-align: right;
   color: white;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 2px;
+  text-align: right;
 }
+
+.container > .ticket-card > p > #selected-seats {
+  display: flex;
+  grid-gap: 2px;
+  flex-wrap: wrap;
+}
+
 
 .container > .ticket-card > p > span > small {
   background-color: white;
