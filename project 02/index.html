@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="shortcut icon" href="../assets/icons/ahmedfaraz-icon.png">
     <title>Theatre Seat Selection</title>
 </head>
+
 <body>
     <!-- Top Name Tag -->
     <small class="info">By Ahmed Faraz _</small>
@@ -38,8 +40,10 @@
                 </div>
             </div>
             <!-- Display Theatre Screen -->
-            <div class="screen">
-                <img src="./images/welcome.gif">
+            <div class="screen" id="screen">
+                <!-- <iframe src="https://www.youtube.com/embed/qSqVVswa420" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe> -->
             </div>
             <!-- Dislpay Seats -->
             <div class="seats-container" id="seats-container">
@@ -55,7 +59,8 @@
                 </div> -->
             </div>
             <!-- Display Result -->
-            <p class="result">You have selected <span id="total-seats-selected">0</span> seats, for a total price of $<span id="total-price">0</span></p>
+            <p class="result">You have selected <span id="total-seats-selected">0</span> seats, for a total price of
+                $<span id="total-price">0</span></p>
             <!-- Control Buttons -->
             <div class="controls">
                 <button class="btn" id="reset">Reset</button>
@@ -69,10 +74,10 @@
             <p>Date <span id="date">2/2/2</span></p>
             <p>Movie <span id="selected-movie">Movie selected</span></p>
             <p>Seats <span id="selected-seats">
-                <small>12</small>
-                <small>13</small>
-                <small>14</small>
-            </span></p>
+                    <small>12</small>
+                    <small>13</small>
+                    <small>14</small>
+                </span></p>
             <p>Price <span id="total-price-ticket">price</span></p>
             <!-- Button -->
             <button class="btn" id="ok">OK</button>
@@ -80,4 +85,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

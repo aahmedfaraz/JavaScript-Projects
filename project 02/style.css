@@ -164,21 +164,21 @@ body {
 }
 
 .screen {
-  width: 200px;
+  width: 250px;
+  height: 100px;
   max-width: 70%;
-  height: 50px;
-  background-color: white;
+  background-color: black;
   box-shadow: 0 5px 10px white;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: rotateX(-15deg);
   margin: 20px 0;
-  animation: blink 2s ease infinite;
+  animation: glow 2s ease infinite;
   overflow: hidden;
 }
 
-@keyframes blink {
+@keyframes glow {
   0% {
     box-shadow: 0 5px 10px white;
   }
@@ -196,22 +196,9 @@ body {
   }
 }
 
-.screen > img {
+.screen > iframe {
   height: 100%;
-  animation: move 1s ease-in-out infinite;
-  z-index: 1;
-}
-
-@keyframes move {
-  0% {
-    transform: rotateZ(0deg);
-  }
-  50% {
-    transform: rotateZ(5deg);
-  }
-  100% {
-    transform: rotateZ(0deg);
-  }
+  width: 100%;
 }
 
 .seats-container {
