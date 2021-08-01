@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poiret+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  color: white;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(to left, #0074ff, #003d87);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main > img {
+  position: absolute;
+}
+
+main .bottom {
+  bottom: -1px;
+  z-index: 2;
+}
+
+main .left {
+  height: 90vh;
+  left: 0;
+}
+
+main .right {
+  height: 50vh;
+  right: 0;
+}
+
+main nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+}
+
+.logo {
+  font-family: "Poiret One", cursive;
+  font-size: 50px;
+}
+
+nav .burger {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+nav .menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  font-family: "Poiret One", cursive;
+}
+
+@media screen and (max-width: 1000px) {
+  main .left {
+    width: 50vw;
+    height: auto;
+    left: 0;
+  }
+  main .right {
+    height: 20vh;
+    right: 0;
+  }
+  .logo {
+    font-size: 30px;
+  }
+  main nav {
+    padding: 10px 20px;
+  }
+  nav .burger {
+    display: block;
+  }
+  nav .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgb(36, 36, 36);
+    flex-direction: column;
+    z-index: 5;
+    width: 100vw;
+    min-height: 100vh;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+  }
+  nav .menu.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  nav .menu li {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    margin-left: 0;
+  }
+  nav .menu li:hover {
+    background-color: rgb(48, 48, 48);
+  }
+  nav .menu li:active {
+    background-color: rgb(19, 19, 19);
+  }
+}
+
+ul li {
+  cursor: pointer;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+ul li:hover {
+  color: rgb(180, 180, 180);
+}
+
+ul li:last-child {
+  background-color: #6600ff;
+  padding: 10px 30px;
+}
+
+ul li:last-child:hover {
+  color: white;
+  background-color: #5800dd;
+}
+
+ul li:last-child:active {
+  transform: scale(0.95);
+}
+
+content {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+content > img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+content > .content {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+content h1 {
+  font-size: 80px;
+  text-shadow: 5px 5px rgba(102, 0, 255, 0.5), 10px 10px rgba(102, 0, 255, 0.2);
+}
+
+content p {
+  color: black;
+  font-size: 15px;
+  text-align: left;
+  background-color: white;
+  padding: 1px 10px;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 1000px) {
+  content {
+    align-items: center;
+    flex-direction: column;
+  }
+  content img {
+    width: 150px;
+    height: 150px;
+  }
+  content > .content {
+    align-items: center;
+    margin-left: 0;
+    padding: 0 10px;
+  }
+  content h1 {
+    font-size: 30px;
+    text-shadow: 3px 3px rgba(102, 0, 255, 0.5);
+  }
+  content p {
+    font-size: 14px;
+  }
+}
+
+section {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.services h1 {
+  padding: 30px 100px;
+  font-weight: unset;
+  font-size: 30px;
+}
+
+.services .services-container {
+  padding: 50px;
+  display: flex;
+  grid-gap: 20px;
+  text-align: justify;
+}
+
+.service-box {
+  background-color: #0063dd;
+  color: white;
+  border-radius: 5px;
+  padding: 50px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-box h2 {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.service-box img {
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .services .services-container {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .services h1 {
+    text-align: center;
+  }
+}
+
+.footer-section {
+  position: relative;
+  background: linear-gradient(to left, #0074ff, #003d87);
+  color: white;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-section .bottom {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  transform: rotateZ(180deg);
+}
+
+.footer-section h2 {
+  font-size: 30px;
+  font-weight: unset;
+}
+
+.footer-section .details {
+  display: flex;
+  padding: 30px 20px;
+  grid-gap: 20px;
+  width: 100%;
+  max-width: 700px;
+  text-align: justify;
+}
+
+.details > div {
+  flex: 1;
+  padding: 40px 20px;
+  background-color: white;
+  color: #003d87;
+  border-radius: 5px;
+}
+
+footer {
+  padding: 10px;
+  background-color: #5728ffa9;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer-section {
+    padding-top: 40px;
+  }
+  .footer-section .details {
+    flex-direction: column;
+  }
+  .details > div h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+  footer {
+    font-size: 12px;
+  }
+}

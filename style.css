@@ -75,6 +75,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  filter: grayscale(0.4);
 }
 
 .logo img {
