@@ -212,6 +212,7 @@ content p {
   content h1 {
     font-size: 30px;
     text-shadow: 3px 3px rgba(102, 0, 255, 0.5);
+    padding: 10px 0 0;
   }
   content p {
     font-size: 14px;
