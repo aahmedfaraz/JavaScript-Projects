@@ -229,6 +229,7 @@ nav {
 .page {
   width: calc(100vw - 10px);
   min-height: calc(100vh - 100px);
+  max-height: 100%;
   scroll-snap-align: start;
 }
 
@@ -247,6 +248,7 @@ nav {
   align-items: center;
   background-color: var(--theme-color-3);
   text-align: center;
+  height: 100%;
 }
 
 #home-page img {
@@ -288,6 +290,7 @@ nav {
   background-color: rgb(29, 29, 29);
   color: white;
   padding: 20px 50px;
+  margin-top: 10px;
 }
 
 #home-page a:hover {
@@ -401,12 +404,16 @@ h5 {
   justify-content: center;
   text-align: center;
   font-weight: unset;
+  padding: 10px;
 }
 
 #contactus-page h1,
 #contactus-page h2 {
   font-weight: unset;
   margin-bottom: 10px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #contactus-page h2 {
@@ -450,6 +457,7 @@ footer {
   #home-page {
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
   }
   #home-page img {
     min-width: 200px;
@@ -457,6 +465,10 @@ footer {
     border-radius: 150px;
     display: flex;
     margin: 10px;
+  }
+
+  #home-page content {
+    order: 2;
   }
 
   #home-page h1 {
@@ -512,6 +524,9 @@ footer {
   #contactus-page {
     max-height: calc(100vh - 90px);
     margin-bottom: 0px;
+  }
+  #contactus-page h2 {
+    font-size: 1rem;
   }
   footer {
     font-size: 4vmin;
